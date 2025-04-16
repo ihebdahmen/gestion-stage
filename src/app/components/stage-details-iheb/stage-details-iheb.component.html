@@ -1,0 +1,8 @@
+<div *ngIf="stage">
+  <h2>{{ stage.titre }}</h2>
+  <p><strong>Description:</strong> {{ stage.description }}</p>
+  <p><strong>Entreprise:</strong> {{ stage.entreprise }}</p>
+  <p><strong>Disponible:</strong> {{ stage.disponible ? "Oui" : "Non" }}</p>
+  <p><strong>Nombre d'intéressés:</strong> {{ stage.nbrInteresse }}</p>
+  <button (click)="retour()">Retour</button>
+</div>

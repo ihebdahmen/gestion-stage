@@ -1,0 +1,54 @@
+<form [formGroup]="stageForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="titre">Titre</label>
+    <input id="titre" formControlName="titre" placeholder="Titre" />
+    <div
+      *ngIf="
+        stageForm.controls['titre'].invalid &&
+        stageForm.controls['titre'].touched
+      "
+    >
+      <small class="error">Titre est requis</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="description">Description</label>
+    <textarea
+      id="description"
+      formControlName="description"
+      placeholder="Description"
+    ></textarea>
+    <div
+      *ngIf="
+        stageForm.controls['description'].invalid &&
+        stageForm.controls['description'].touched
+      "
+    >
+      <small class="error"
+        >La description doit contenir au moins 3 caractères</small
+      >
+    </div>
+  </div>
+
+  <div>
+    <label for="entreprise">Entreprise</label>
+    <input
+      id="entreprise"
+      formControlName="entreprise"
+      placeholder="Entreprise"
+    />
+    <div
+      *ngIf="
+        stageForm.controls['entreprise'].invalid &&
+        stageForm.controls['entreprise'].touched
+      "
+    >
+      <small class="error"
+        >Le nom de l'entreprise doit commencer par une majuscule</small
+      >
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="stageForm.invalid">Ajouter</button>
+</form>

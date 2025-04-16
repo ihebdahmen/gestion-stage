@@ -1,0 +1,11 @@
+<h3>Liste des stages :</h3>
+
+<div *ngFor="let stage of stages">
+  <div class="stage">
+    <p>{{ stage.titre }} - {{ stage.entreprise }}</p>
+    <button (click)="viewDetails(stage?.id ?? '')">Détails</button>
+    <button (click)="deleteStage(stage?.id ?? '')">Supprimer</button>
+  </div>
+</div>
+
+<p *ngIf="!stages.length">Aucun stage trouvé!</p>

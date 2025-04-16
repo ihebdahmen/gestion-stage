@@ -1,0 +1,20 @@
+{
+  "stages": [
+    {
+      "id": "7805",
+      "titre": "Stage 2",
+      "description": "Stage Ouvrier",
+      "entreprise": "Sofrecom",
+      "disponible": true,
+      "nbrInteresse": 0
+    },
+    {
+      "id": "f75e",
+      "titre": "Test",
+      "description": "test",
+      "entreprise": "Test",
+      "disponible": true,
+      "nbrInteresse": 0
+    }
+  ]
+}
